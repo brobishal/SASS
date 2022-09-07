@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css blend mode</title>
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<style>
+		/*blend means the mix the color*/
+		/*background-blend-mode blends with its background-image and its background-color*/
+		/*mix-blend-mode blends with its backdrop the part what is behind itself and its background color*/
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+
+		.main_header{
+			width:100vw;
+			height:100vh;
+			background-image:url("img.jpg");
+			/*veritically and horizentally */
+			background-size:100% 100%;
+			display:grid;
+			place-items:center;
+		}
+		h1{
+			font-size:100px;
+			font-family: 'Kaushan Script', cursive;
+			background:#fff;
+			padding:0 10px;
+			mix-blend-mode:screen;
+
+
+		}
+	</style>
+</head>
+<body>
+	<div class="main_header">
+		<h1>Celebrity Khabar</h1>
+	</div>
+
+</body>
+</html>

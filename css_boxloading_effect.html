@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size:62.5%;
+        }
+        .main_loading{
+            width:15rem;
+            height:15rem;
+            position: relative;
+            /* background-color:hsl(206,21%,94%); */
+          
+          
+        }
+
+        .center_loading{
+            width:15rem;
+            height:15rem;
+            position:relative;
+            /* background-color:red; */
+            display:flex;
+            justify-content:center;
+
+
+            
+
+        }
+        span{
+            position:absolute;
+            left:0;
+            top:0;
+            width:5rem;
+            height:5rem;
+            background-color:black;
+            animation:load 2s linear infinite;
+            box-shadow:0 2.8px 2.2px rgba(0,0,0,0.034),
+            0 6.7px 5.3px rgba(0,0,0,0.072),0 41.8px 33.4px rgba(0,0,0,0.06),
+            0 33.3px 17.9px rgba(0,0,0,0.072),0 42.8px 33.4px rgba(0,0,0,080),0 100px 80px rgba(0,0,0,0.12px);
+            
+        }
+        span:nth-child(2){
+            animation-delay:0.67s;
+
+        }
+        span:nth-child(3){
+            animation-delay:1.32s;
+
+        }
+
+
+        @keyframes load{
+            0%{
+                left:0;
+                top:0;
+            }
+           12.5%{
+               top:0;
+               left:50%;
+           }
+           25%{
+               top:0;
+               left:50%;
+           }
+           37.5%{
+               top:50%;
+               left:50%;
+           }
+           50%{
+            top:50%;
+               left:50%;
+           }
+           62.5%{
+               left:0;
+               top:50%;
+           }
+           75%{
+               left:0;
+               top:50%;
+
+           }
+
+           87%{
+               left:0;
+               top:0;
+
+           }
+           100%{
+                left:0;
+                top:0;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="main_loading">
+        <div class="center_loading">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>

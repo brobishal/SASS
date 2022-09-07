@@ -1,0 +1,95 @@
+// css=sass
+// css3=scss
+
+@import "mixin";
+@import "var";
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+    // means aba mero 1rem=10px vayo
+
+}
+
+// this is variable declaration in sass
+// $bg-color:#85929E;
+
+// css ma pani ahile variable declare garna sakxau root{--hsjdhdsj}
+// --------------------------asma php ma variable declare  gare jastai gari 
+
+
+
+// mixin with name lekhne
+// The @mixin directive lets you create CSS code that is to be reused throughout the website.
+// @mixin flexprob{
+//     display:flex;
+//     justify-content:center;
+//     align-items:center;
+//    flex-direction:column;
+// }
+
+// @mixin para($par1,$par){
+//     color:black;
+//         font-size:10rem;
+      
+//         text-transform:capitalize;
+//         letter-spacing:$par1;
+//         text-transform:$part2;
+        
+// }
+
+
+// css lai kun kun super power milekoxat?
+// 1) operators
+// 2) vaiables
+// 3)nesting
+// 4)mixin
+// 5)paramater
+// 6)partials- it means jati pani mixin usko hami alag page ma kehera call garna sakxau 
+// partial file banuna ki lagi _name kehxau
+
+
+
+.main_header{
+    width:100vw;
+    height:100vh;
+    // The @include directive is created to let you use (include) the mixin.
+   @include flexprob;
+    background:$bg-color;
+
+    h1{
+        @include para(1.5rem,uppercase);
+      
+        // color:black;
+        // operator pani use garn asakxau like + - *
+        // font-size:5rem+5rem;
+        // letter-spacing:.3rem;
+        // & le asko mathi jati pani parent element hai yo fetch garxa or we can say inherit
+
+        // this is called our nesting
+        &:hover{
+            color:#F1C40F ;
+        }
+        &::after{
+            content:"page";
+        }
+    }
+    
+    p{
+        @include para(0.3,capitalize);
+        // : this is psedo classs
+    &:hover{
+        color:#F1C40F ;
+    }
+    
+    }
+    
+}
+
+

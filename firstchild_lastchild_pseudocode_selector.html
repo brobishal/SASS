@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+
+			font-family:"mulish", sans-serif;
+
+
+		}
+
+		.main_div{
+			width:100vw;
+			height:100vh;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction:column;
+			background-color:#38ada9;
+			color:#fff;
+
+		}
+		/* * is universal operator*/
+		.main_div * {
+			padding-top:6px;
+		}
+	
+
+/*The :nth-child(n) selector matches every element that is the nth child, regardless of type, of its parent.
+
+n can be a number, a keyword, or a formula.*/
+		li:nth-child(2n){
+			color:#ff006e;
+		}
+		li:nth-child(2n+1){
+			color:blue;
+		}
+
+		li:nth-child(1){
+			
+		}
+		/*li:first-child{
+			color:#e85d04;
+		}*/
+		li:last-child{
+			color:green;
+		}
+	</style>
+</head>
+<body>
+	<h1>css position /number -based pseudo class selector</h1>
+	<!--  :first-child -selecct the first element within a parent  -->
+	<!-- :last-child -select the second element withn a parent -->
+	<!-- :nth-child()  select elements based on a simple provided algebric expression (eg "2n" or "4n-1").has the ability to do things like select even/odd elements "every third","the first five" and thing like that -->
+
+
+<ul class="main_div">
+	<li>one</li>
+	<li>two</li>
+	<li>three</li>
+	<li>four</li>
+	<li>five</li>
+	<li>six</li>
+	<li>seven</li>
+	<li>eight</li>
+	<li>nine</li>
+	<li>tenth</li>
+</ul>
+</body>
+</html>

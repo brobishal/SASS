@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		/*div inside div center ma launa ko lagi this is first trick */
+		/**{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+		.parent_div{*/
+			/*viewport width means junsukai device ma use karo usme yo complete div linxa*/
+		/*	width:100vw;
+			height:100vh;
+			background-color:blue;
+			position:relative;
+
+		}
+		.child_div{
+			width:60vw;
+			height:60vh;
+			background-color:yellow;
+			position:absolute;
+			left:50%;
+			top:50%;*/
+			/*translate le eak position bata arko position ma move garxa*/
+		/*	transform:translate(-50%,-5);
+
+		}*/
+
+
+
+		/*-------------------------------------this is second trick--------------------------------------------*/
+/*
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+		.parent_div{
+			
+			width:100vw;
+			height:100vh;
+			background-color:blue;
+			display:flex;
+			//         asle vertically div lai center ma lanxa
+			justify-content:center;
+			/*asle  horizentally center ma lanxa*/
+		/*	align-items:center;
+			
+		}
+		.child_div{
+			width:60vw;
+			height:60vh;
+			background-color:yellow;
+			
+		}*/
+
+		/*t.................................this is third method div lai center ma leuna..................c*/
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+		.parent_div{
+			/*viewport width means junsukai device ma use karo usme yo complete div linxa*/
+			width:100vw;
+			height:100vh;
+			background-color:blue;
+			display:grid;
+			place-items:center;
+			
+			
+		}
+		.child_div{
+			width:60vw;
+			height:60vh;
+			background-color:yellow;
+			
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="parent_div">
+		<div class="child_div">
+
+			
+			<h1>welcome to master css class</h1>
+		</div>
+		
+	</div>
+
+</body>
+</html>

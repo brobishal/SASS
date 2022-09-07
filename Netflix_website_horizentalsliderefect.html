@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .main_div{
+            width:100vw;
+            height:100vh;
+            background-color:hsl(206,21%,95%);
+            display:grid;
+            place-items:center;
+        }
+        .center_div{
+            display:flex;
+
+        }
+        img{
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main_div">
+
+    <div class="center_div" id="centerdiv">
+        <img src="https://via.placeholder.com/600/771796" alt="">
+
+
+
+    </div>
+
+    </div>
+
+    <script>
+         const centerdiv=document.getElementById("centerdiv");
+
+        // call the json api
+        //jaba hamile photo lai fetch access garxau taba access hunxa means success then  uska data maile get gare and simpliy hamile console garera 
+        //dekhaideu
+        fetch("http://jsonplaceholder.typicode.com/photos").then((apidata)=>{
+            return apidata.json();
+            }).then((jsondata)=>{
+                // console.log(jsondata[0].url);
+                // json.map(value,index,array,this)
+                jsondata.map((val)=>{
+                    key=val.id;
+                    let img=document.createElement("img");
+                    
+                    img.src=`https://picsum.photos/200/300?random=${val.id}`;
+                    centerdiv.appendChild(img);
+                    console.log(val.url);
+
+                });
+
+            }) 
+    
+    </script>
+</body>
+</html>

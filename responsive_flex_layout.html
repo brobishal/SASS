@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title></title>
+	<style>
+
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+			font-family:'Mulish',sans-serif;
+
+		}
+
+		.garnd_parent{
+			width:100vw;
+			height:100vh;
+			background:gray;
+			color:#fff;
+		}
+		h1{
+			font-size:4rem;
+			padding:50px 0;
+			text-align:center;
+			color:#000;
+		}
+		p{
+			text-align:center;
+		}
+		.parents{
+			width:80vw;
+			height:auto;
+			margin:auto;
+		/*	background-color:#636e72;*/
+
+
+			display:flex;
+			justify-content:space-around;
+			/*The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.The flex items break into multiple lines.*/
+			flex-wrap:wrap;
+
+			/*smooth ko lagi*/
+			transition:all 0.2 linear;		
+		}
+		.child{
+			height:200px;
+			background:#81ecec;
+			/*horizentally/vertically/ blur/ color*/
+			box-shadow:0 0 20px #bac3c3;
+			/*flex-grow/flex-shrink/ flex-basis /*/
+			flex:1 1 200px;
+			margin:20px;
+		}
+		.child:first-child{
+			background-color:#ffbe76;
+		}
+		.child:last-child{
+			background-color:red;
+		}
+		@media(max-width:768px){
+			.grand_parent{
+				height:auto;
+
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+
+<div class="grand_parent">
+	<h1>Servers</h1>
+
+	<div class="parents">
+		<div class="child">
+			<p>Thapa technical</p>
+		</div>
+
+		<div class="child">
+			<p>Thapa technical</p>
+		</div>
+
+		<div class="child">
+			<p>Thapa technical</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+@mixin flexprob{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   flex-direction:column;
+}
+
+@mixin para($par1,$par){
+    color:black;
+        font-size:10rem;
+      
+        text-transform:capitalize;
+        letter-spacing:$par1;
+        text-transform:$part2;
+        
+}

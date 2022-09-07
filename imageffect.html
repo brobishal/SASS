@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+
+			/*box-sizing means jati pani space xa uske under nai sabkuch  karna hai 
+				means apne jamin liya hai 400/400 ka so 400/400 ke uder jo bi karo uske bahar kuch bhi chotasa hissa pani lina didaina
+			*/
+		}
+		.main_header{
+			width:100vw;
+			height:100vh;
+			display:grid;
+			place-items:center;
+		}
+		.design{
+			position:relative;
+			width:400px;
+			height:400px;
+		}
+
+		/*all element*/
+		/*it means hamro design class ke under jati pani elements xa sabko same propery milna chahiye*/
+			.design >*,.blend> *{
+
+				position:absolute;
+				width:400px;
+				height:400px;
+			}
+
+			#rotateBorder{
+				border:15px  solid #eb311f;
+				transform:rotate(45deg);
+				box-shadow:0 0 10px #eb311f,inset 0 0 20px #eb311f;
+			}
+
+			.grid{
+				display:grid;
+				grid-template-rows:1fr 1fr;
+				grid-template-columns:1fr 1fr;
+			}
+
+			.data_white{
+				background:#fff;
+			}
+			.blend{
+				mix-blend-mode:multiply;
+			}
+/*image sadhai proper rahe vanna ko lagi we use*/
+			img{
+				object-fit:cover;
+				box-shadow:0 0 20px #bac3c3;
+			}
+
+	</style>
+</head>
+<body>
+	<!-- in css ma buttom huneko priority badi hunxa -->
+
+	<div class="main_header">
+		
+		<div class="design">
+			<!-- this is first image -->
+			<img src="dog.jpg" alt="dogimage">
+
+			<div id="rotateBorder"></div>
+
+			<div class="grid">
+				<div class="data_white"></div>
+				<div></div>
+				<div></div>
+				<div class="data_white"></div>
+			</div>
+		
+
+		<div class="blend">
+			<img src="dog.jpg" alt="dog image">
+
+			<div class="grid">
+				<div></div>
+				<div class="data_white"></div>
+				<div class="data_white"></div>
+				<div></div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+</body>
+</html>
+<!-- The mix-blend-mode CSS property sets how an element's content should blend with the content of the element's parent and the element's background. -->
+<!-- The <blend-mode> CSS data type describes how colors should appear when elements overlap. It is used in the background-blend-mode and mix-blend-mode properties. -->
